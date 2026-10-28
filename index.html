@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#263b32" />
+    <meta
+      name="description"
+      content="Plataforma de apoio a registros de patologia veterinária."
+    />
+    <title>Patologia Vet — Sistema clínico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <main id="login-screen" class="login-screen">
+      <section class="login-art" aria-label="Patologia veterinária">
+        <div class="brand brand-light"><span class="brand-mark">+</span> PATOVET</div>
+        <div class="art-copy">
+          <span class="eyebrow">MEDICINA VETERINÁRIA · PATOLOGIA</span>
+          <h1>Conhecimento que cuida de cada detalhe.</h1>
+          <p>Seu espaço seguro para organizar casos, exames e descobertas clínicas.</p>
+        </div>
+        <div class="art-footer"><span>●</span> Um cuidado mais completo começa com informação.</div>
+      </section>
+      <section class="login-panel">
+        <div class="login-form-wrap">
+          <div class="brand brand-dark"><span class="brand-mark">+</span> PATOVET</div>
+          <span class="eyebrow">BEM-VINDO(A) DE VOLTA</span>
+          <h2>Acesse sua conta</h2>
+          <p class="muted">Entre com seu e-mail e senha para continuar.</p>
+          <form id="login-form">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" autocomplete="username" placeholder="voce@exemplo.com" required />
+            <label for="login-password">Senha</label>
+            <input id="login-password" type="password" autocomplete="current-password" placeholder="Sua senha" required />
+            <button class="button button-primary login-button" type="submit">Entrar <span>→</span></button>
+          </form>
+          <p class="login-note">Acesso protegido pela autenticação do Firebase.</p>
+          <p id="login-error" class="form-error" role="alert"></p>
+        </div>
+        <div class="login-bottom">PATOVET <span>·</span> REGISTROS CLÍNICOS VETERINÁRIOS</div>
+      </section>
+    </main>
+
+    <div id="app-shell" class="app-shell hidden">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand brand-light sidebar-brand" href="#" aria-label="Patovet início">
+          <span class="brand-mark">+</span><span>PATOVET<small>GESTÃO CLÍNICA</small></span>
+        </a>
+        <div class="nav-caption">ESPAÇO DE TRABALHO</div>
+        <nav id="main-nav" aria-label="Menu principal"></nav>
+        <div class="sidebar-bottom">
+          <div class="sidebar-tip"><span class="tip-icon">✳</span><strong>Organização que faz diferença</strong><p>Seus registros clínicos, sempre à mão.</p></div>
+          <button id="logout-button" class="logout-button" type="button"><span>↪</span> Sair da conta</button>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <button id="mobile-menu" class="mobile-menu" type="button" aria-label="Abrir menu">☰</button>
+          <div class="breadcrumbs">Patovet <span>/</span> <strong id="breadcrumb-current">Visão geral</strong></div>
+          <div class="topbar-user"><span class="status-dot"></span><span id="user-email"></span><span class="avatar">V</span></div>
+        </header>
+        <main class="page-content" id="page-content"></main>
+        <footer class="app-footer">PATOVET <span>·</span> Cuidado, ciência e informação.</footer>
+      </div>
+    </div>
+    <script type="module" src="./app.js?v=20261028-2013"></script>
+  </body>
+</html>
