@@ -1,6 +1,6 @@
-# Patovet
+# KoprowPath
 
-Aplicação web responsiva para registros de patologia veterinária, com autenticação por e-mail e senha, persistência de formulários no Cloud Firestore e armazenamento de imagens no Firebase Storage.
+Aplicação web responsiva KoprowPath para registros de patologia veterinária, com identidade visual verde-musgo e roxa, autenticação por e-mail e senha, persistência de formulários no Cloud Firestore e armazenamento de imagens no Firebase Storage.
 
 ## Configuração do Firebase
 
